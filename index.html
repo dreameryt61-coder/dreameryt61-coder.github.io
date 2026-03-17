@@ -1,37 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr. Anderdud’s School Equipment Sales</title>
 
 <style>
 body {
     margin: 0;
-    font-family: 'DejaVu Sans', Arial, sans-serif;
-    background: #f2f2f2;
+    font-family: 'DejaVu Sans', Arial;
 }
 
+/* HEADER */
 .header {
     background: #9e1c1c;
     color: #f5d6a1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    flex-wrap: wrap;
+    padding: 10px 15px;
 }
 
 .header h1 {
     flex: 1;
     text-align: center;
+    font-size: 26px;
     margin: 0;
 }
 
-.header img {
-    height: 60px;
-}
-
+/* NAV */
 .navbar {
     display: flex;
     background: black;
@@ -43,69 +39,101 @@ body {
     background: black;
     color: white;
     border: none;
-    cursor: pointer;
-    transition: 0.3s;
+    font-size: 16px;
 }
 
 .navbar button:hover,
-.navbar button.active {
+.navbar .active {
     background: #9e1c1c;
 }
 
+/* SECTIONS */
 .section {
     display: none;
     padding: 20px;
-    animation: fadeIn 0.5s;
 }
 
 .show {
     display: block;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(10px);} 
-    to {opacity: 1; transform: translateY(0);} 
+/* TITLE */
+.title {
+    text-align: center;
+    margin-top: 10px;
 }
 
-.home-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.home-text {
-    flex: 1;
-}
-
-.home-text h1 {
+.blue {
     color: #1e4d8f;
+    font-size: 38px;
+    font-weight: bold;
 }
 
-.highlight {
+.orange {
     color: orange;
-    font-size: 28px;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 .green {
     color: green;
+    font-size: 20px;
+    font-weight: bold;
 }
 
+/* MAIN */
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* IMAGE */
+.main img {
+    width: 350px;
+}
+
+/* CARD */
 .card {
-    background: #e8d4a8;
+    background: #e6d2a8;
     padding: 20px;
-    border-radius: 10px;
+    width: 320px;
 }
 
-img {
-    max-width: 100%;
+.card h2 {
+    color: #1e4d8f;
+    margin-top: 0;
 }
 
+.card button {
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* BOTTOM TEXT */
+.bottom {
+    margin-top: 25px;
+    padding-left: 20px;
+}
+
+.bottom h2 {
+    color: #1e4d8f;
+}
+
+/* MOBILE */
 @media (max-width: 600px) {
-    .header {
+    .main {
         flex-direction: column;
+        align-items: center;
     }
-    .home-container {
+
+    .header {
         flex-direction: column;
     }
 }
@@ -126,9 +154,11 @@ function showSection(id, btn) {
 <body>
 
 <div class="header">
-<img src="bus.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/School_bus.jpg/120px-School_bus.jpg">
+
 <h1>Mr. Anderdud’s School Equipment Sales</h1>
-<img src="books.png">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Books-aj.svg_aj_ashton_01.svg/120px-Books-aj.svg_aj_ashton_01.svg.png">
 </div>
 
 <div class="navbar">
@@ -138,40 +168,55 @@ function showSection(id, btn) {
 <button onclick="showSection('contact', this)">Contact Us</button>
 </div>
 
+<!-- HOME -->
 <div id="home" class="section show">
-<div class="home-container">
 
-<div class="home-text">
-<h1>Blue Classroom Chairs for Sale!</h1>
-<div class="highlight">20–30 Blue Chairs Available</div>
+<div class="title">
+<div class="blue">Blue Classroom Chairs for Sale!</div>
+<div class="orange">20-30 Blue Chairs Available</div>
 <div class="green">Perfect for a Grade 5/6 Classroom!</div>
 </div>
 
-<img src="chairs.png">
+<div class="main">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Plastic_school_chair.jpg/320px-Plastic_school_chair.jpg">
 
 <div class="card">
 <h2>Classroom Chairs for Sale!</h2>
+
+<p>We have 20-30 Blue Student Chairs in great condition ideal for a Grade 5/6 Classroom!</p>
+
 <ul>
 <li>Sturdy & Comfortable</li>
 <li>Stackable Design</li>
 <li>Affordable Pricing</li>
 </ul>
+
 <button>Contact Us for More Info!</button>
 </div>
 
 </div>
+
+<div class="bottom">
+<h2>Great for Grade 5/6 Students!</h2>
+<p>These blue chairs are perfect for a Grade 5/6 classroom. Ideal for students aged 10-12. Don’t miss out on this deal!</p>
 </div>
 
+</div>
+
+<!-- ABOUT -->
 <div id="about" class="section">
 <h1>About Us</h1>
-<p>We sell school equipment at affordable prices for classrooms.</p>
+<p>We sell school equipment at affordable prices.</p>
 </div>
 
+<!-- INVENTORY -->
 <div id="inventory" class="section">
 <h1>Inventory</h1>
 <p><b>Out of Stock!</b></p>
 </div>
 
+<!-- CONTACT -->
 <div id="contact" class="section">
 <h1>Contact Us</h1>
 <p>Phone: <b>204-275-5048</b></p>
