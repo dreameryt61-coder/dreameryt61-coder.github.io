@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Anderdud’s School Equipment Sales</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'DejaVu Sans', Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.header {
+    background: #9e1c1c;
+    color: #f5d6a1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.header img {
+    height: 60px;
+}
+
+.navbar {
+    display: flex;
+    background: black;
+}
+
+.navbar button {
+    flex: 1;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover,
+.navbar button.active {
+    background: #9e1c1c;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.5s;
+}
+
+.show {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);} 
+    to {opacity: 1; transform: translateY(0);} 
+}
+
+.home-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-text h1 {
+    color: #1e4d8f;
+}
+
+.highlight {
+    color: orange;
+    font-size: 28px;
+}
+
+.green {
+    color: green;
+}
+
+.card {
+    background: #e8d4a8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+    .home-container {
+        flex-direction: column;
+    }
+}
+</style>
+
+<script>
+function showSection(id, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('show'));
+    document.getElementById(id).classList.add('show');
+
+    document.querySelectorAll('.navbar button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+<img src="bus.png">
+<h1>Mr. Anderdud’s School Equipment Sales</h1>
+<img src="books.png">
+</div>
+
+<div class="navbar">
+<button class="active" onclick="showSection('home', this)">Home</button>
+<button onclick="showSection('about', this)">About Us</button>
+<button onclick="showSection('inventory', this)">Inventory</button>
+<button onclick="showSection('contact', this)">Contact Us</button>
+</div>
+
+<div id="home" class="section show">
+<div class="home-container">
+
+<div class="home-text">
+<h1>Blue Classroom Chairs for Sale!</h1>
+<div class="highlight">20–30 Blue Chairs Available</div>
+<div class="green">Perfect for a Grade 5/6 Classroom!</div>
+</div>
+
+<img src="chairs.png">
+
+<div class="card">
+<h2>Classroom Chairs for Sale!</h2>
+<ul>
+<li>Sturdy & Comfortable</li>
+<li>Stackable Design</li>
+<li>Affordable Pricing</li>
+</ul>
+<button>Contact Us for More Info!</button>
+</div>
+
+</div>
+</div>
+
+<div id="about" class="section">
+<h1>About Us</h1>
+<p>We sell school equipment at affordable prices for classrooms.</p>
+</div>
+
+<div id="inventory" class="section">
+<h1>Inventory</h1>
+<p><b>Out of Stock!</b></p>
+</div>
+
+<div id="contact" class="section">
+<h1>Contact Us</h1>
+<p>Phone: <b>204-275-5048</b></p>
+</div>
+
+</body>
+</html>
