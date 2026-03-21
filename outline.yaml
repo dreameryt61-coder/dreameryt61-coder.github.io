@@ -1,0 +1,64 @@
+slides:
+  - id: slide1
+    title: Radioactive Chicken Heads
+    subtitle: Genetically Modified Punk Rock from Orange, CA!
+    layout: title
+    image: ppt_versions/draft/public/images/band_stage_1.jpeg
+  - id: slide2
+    title: Band Origins
+    subtitle: From Comic Books to Mutant Punk Mayhem!
+    layout: section_title
+  - id: slide3
+    title: Early History (1993-2004)
+    content: Originally "Joe and the Chicken Heads", this group of mutant misfits gained a cult following in the OC ska-punk scene. They made their national debut on Extreme Gong in 1998 and dropped "Keep on Cluckin'" in 2000!
+    layout: two_column
+    image: ppt_versions/draft/public/images/album_cover_1.jpeg
+  - id: slide4
+    title: Evolution & Studio Albums
+    content:
+      - 2004: Name Change to Radioactive Chicken Heads
+      - 2005: Growing Mold - Eclectic & Experimental
+      - 2008: Music for Mutants - Aggressive Punk Sound
+      - 2017: Tales From The Coop - A Concept Album Masterpiece
+    layout: timeline
+  - id: slide5
+    title: Musical Style
+    content:
+      - Sound: A wild mix of punk rock, heavy metal, ska, and "Geek Rock".
+      - Influences: Inspired by the theatrical chaos of Green Jellÿ, Gwar, Oingo Boingo, and the legend "Weird Al".
+    layout: two_column_tiled
+  - id: slide6
+    title: The Cast of Characters
+    content:
+      - Carrot Topp: Lead vocals and band founder since 1993.
+      - Poultry Geist: Percussion and multi-instrumentalist.
+      - Sgt. Psyclopps: Guitar, brass, and backing vocals.
+    layout: tiled_text_icons
+    images:
+      - ppt_versions/draft/public/images/carrot_topp_1.jpeg
+      - ppt_versions/draft/public/images/psyclopps_1.png
+  - id: slide7
+    title: Mythology & Live Shows
+    content:
+      - Backstory: Mutants escaping Dr. Baron Von Kluckinstein's lab!
+      - Theatricality: Staged combat with villains like Badd Bunny!
+      - Anonymity: These mutants never appear without their masks!
+    layout: two_column_rounded
+    image: ppt_versions/draft/public/images/dr_kluckinstein_1.jpeg
+  - id: slide8
+    title: Multimedia Projects
+    content:
+      - Badd Bunny Breakout RPG: A pixelated mutant adventure.
+      - The TV Show Pilot: Puppet-based dystopian chaos.
+      - Tanksgiving Stage Play: Surrealist comedy at its finest.
+    layout: tiled_images
+    image: ppt_versions/draft/public/images/badd_bunny_1.jpeg
+  - id: slide9
+    title: Media & Film
+    content: From Tyra Banks to the Gong Show, these chickens are everywhere! They've even rocked horror soundtracks like "Poultrygeist: Night of the Chicken Dead".
+    layout: bleed_image
+    image: ppt_versions/draft/public/images/band_stage_1.jpeg
+  - id: slide10
+    title: Discography Highlights
+    content: From "Keep on Cluckin'" to "Tales From The Coop". Don't miss their "Radioactive" cover and "Burning Latke" parody!
+    layout: section_title
